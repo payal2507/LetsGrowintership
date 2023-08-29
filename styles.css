@@ -1,0 +1,344 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background-color: aliceblue;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightblue;
+  color: black;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 10px;
+}
+
+.container{
+  display: flex;
+  font-size: 80px;
+}
+
+.container .form {
+  width: 50%;
+  height: 30%;
+}
+
+.container .form form {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 4rem;
+  word-wrap: break-word;
+}
+
+#name,#email,#website,#url {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  outline: 1px solid rgba(128, 128, 128, 0.26);
+  font-size: 15px;
+}
+
+#name:focus,#email:focus,#website:focus,#url:focus {
+  outline: 1px solid rgba(0, 0, 255, 0.711);
+}
+
+.name {
+  display: flex;
+  align-items: center;
+  gap: 6rem;
+  font-size: 1.25rem;
+}
+
+.email {
+  display: flex;
+  align-items: center;
+  gap: 6.4rem;
+  font-size: 1.25rem;
+}
+
+.website {
+  display: flex;
+  align-items: center;
+  gap: 4.73rem;
+  font-size: 1.25rem;
+}
+
+.image {
+  display: flex;
+  align-items: center;
+  gap: 5.7rem;
+  font-size: 1.25rem;
+}
+
+.gender {
+  display: flex;
+  align-items: center;
+  gap: 5.3rem;
+  font-size: 1.25rem;
+}
+
+.skills {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  font-size: 1.25rem;
+}
+
+.text-val {
+  font-size: 1.18rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.text-val label {
+  display: flex;
+  gap: 3px;
+}
+
+.button {
+  display: flex;
+  gap: 1.9rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.button #submit {
+  padding: 0.5rem 2.6rem;
+  font-size: 1.2rem;
+  background-color: red;
+  border: 0.1rem solid red;
+  border-radius: 1rem;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.37s,color 0.37s;
+}
+
+.button #submit:hover{
+  background-color: white;
+  color: #8160db;
+}
+
+.button #reset {
+  padding: 0.5rem 2.6rem;
+  font-size: 1.2rem;
+  background-color: #FF2E63;
+  border: 0.1rem solid #FF2E63;
+  border-radius: 1rem;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.41s,color 0.41s;
+}
+
+.button #reset:hover{
+  background-color: white;
+  color: red;
+}
+
+.button #submit:active,.button #reset:active {
+  background-color: black;
+  box-shadow: none;
+}
+
+.container .line {
+  margin: auto;
+  width: 3px;
+  height: 37rem;
+  background-color: lightblue;
+  border-radius: 33px;
+}
+
+.op-box {
+  width: 50%;
+}
+
+.output {
+  padding: 45px;
+}
+
+h2 {
+  text-align: center;
+  padding: 5px;
+  font-size: 1.5rem;
+  border-bottom: 1px solid lightblue;
+}
+
+.output .cardContainer {
+  overflow-y: auto;
+  height: 71vh;
+}
+
+.output .card {
+  height: auto;
+  justify-content: space-evenly;
+  display: flex;
+  background-color: rgba(126, 128, 126, 0.132);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin: 10px 0;
+  gap: 5rem;
+}
+
+
+.card .info button {
+  padding: 7px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(227, 6, 6);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.card .info button:active {
+  background-color: black;
+  box-shadow: none;
+}
+/* Existing styles */
+
+.card {
+  /* Add these styles */
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 20px;
+}
+
+.card img {
+  /* Adjust image size */
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.card .info {
+  /* Adjust font size and spacing */
+  flex: 1;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card .info a {
+  /* Adjust link color */
+  color: #007bff;
+}
+
+.card .info button {
+  /* Adjust button styles */
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+
+@media(max-width:1109px) {
+  .container .line {
+      display: none;
+  }
+
+  .container {
+      flex-direction: column;
+  }
+
+  .container .form {
+      width: 100%;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+  }
+
+  #name, #email, #website, #url{
+      width: 100%;
+  }
+
+  .op-box {
+      width: 100%;
+  }
+
+  .name,.email,.website,.image {
+      justify-content: space-around;
+  }
+
+  .container .form form {
+      padding: 1.2rem;
+  }
+}
+
+@media(max-width:729px) {
+
+  .output .card{
+      width: 100%;
+  }
+
+  #name, #email, #website, #url{
+      width: 100%;
+  }
+}
+
+@media(max-width:680px){
+  .output .card{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;    
+      gap: 2.5rem;
+  }
+  .card img {
+      margin: auto;
+  }
+}
+
+@media(max-width:450px) {
+  h1 {
+      font-size: 1.1rem;
+  }
+
+  .container .form form{
+      gap:1.5rem;
+  }
+
+  #name, #email, #website, #url{
+      font-size: 0.9rem;
+  }
+
+  .name,.email,.website,.image,.gender,.skills {
+      display: contents;
+  }
+
+  .name,.email,.website,.image,.gender,.skills{
+      font-size: 1rem;
+  }
+
+  .text-val{
+      font-size: 1rem;
+      gap: 2rem;
+  }
+
+  .button #submit{
+      padding: 0.2rem 1.6rem;
+      font-size: 1.1rem;
+  }
+
+  .button #reset{
+      padding: 0.2rem 1.6rem;
+      font-size: 1.1rem;
+  }
+
+  .output{
+      padding: 1rem;
+  }
+}
